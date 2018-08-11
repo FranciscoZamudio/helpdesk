@@ -7,13 +7,15 @@ moduleApp.config(function ($stateProvider,$urlRouterProvider) {
     var ticketsState = {
         name: 'tickets',
         url: '/tickets',
-        templateUrl: 'views/tickets.html'
+        templateUrl: 'views/tickets.html',
+        controller: 'ticketsController'
     }
 
     var dashboardState = {
         name: 'dashboard',
         url: '/dashboard',
-        templateUrl: 'views/dashboard.html'
+        templateUrl: 'views/dashboard.html',
+        controller: 'dashboardController'
     }
     var metricsState = {
         name: 'metrics',
@@ -27,4 +29,8 @@ moduleApp.config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider.state(metricsState);
     $urlRouterProvider.otherwise('/tickets');
 
+});
+
+moduleApp.controller('dashboardController', function($scope) {
+  $scope.dags = ['messi', 'ronaldo', 'chichadios'];
 });
