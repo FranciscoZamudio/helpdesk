@@ -1,6 +1,27 @@
 <div>
-    <h1>MVC con AngularJS</h1>
     <ul>
       <li ng-repeat="dog in dogs">{{ dog }}</li>
     </ul>
+</div>
+<div id="form">
+  <form>
+  <h3>personal info:</h3><br>
+    Name: <input type="text" ng-model="ticket.name" /><br>
+    Area:
+    <select ng-model = "ticket.area">
+      <option value = "marketing"> Marketing
+      <option value = "human resources">Human Resources
+      <option value = "it"> IT
+    </select><br><br>
+
+    <h3>issue info:</h3><br>
+    Priority:
+    <select ng-model = "ticket.priority">
+      <option value = "low"> Low
+      <option value = "medium">Medium
+      <option value = "high"> High
+    </select><br>
+    Description: <textarea ng-model="ticket.description" /></textarea><br>
+    <input type="submit" ng-click="insertTicket(ticket)" value="upload" />
+  </form>
 </div>
