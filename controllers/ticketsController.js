@@ -34,9 +34,8 @@ $scope.init();
 
 $scope.master = {};
 $scope.insertTicket = function(ticket) {
-  var info = 'action=addTicket' + '&ticketInfo=' + ticket;
+  var info = 'action=addTicket' + '&ticketInfo=' + JSON.stringify(ticket);
   $scope.postData(info);
-  console.log(ticket);
 };
 
 
