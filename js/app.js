@@ -20,7 +20,7 @@ moduleApp.config(function ($stateProvider,$urlRouterProvider) {
     var metricsState = {
         name: 'metrics',
         url: '/metrics',
-        template: "<h1>About Me</h1><p>I'm a web developer and entrepreneur with 3+ years of experience</p>"
+        template: "<h1>About Me</h1><p>I'm a web developer and entrepreneur with 1.5+ years of experience</p>"
     }
 
 
@@ -29,8 +29,4 @@ moduleApp.config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider.state(metricsState);
     $urlRouterProvider.otherwise('/tickets');
 
-});
-
-moduleApp.controller('dashboardController', function($scope) {
-  $scope.dags = ['messi', 'ronaldo', 'chichadios'];
 });

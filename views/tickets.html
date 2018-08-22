@@ -1,27 +1,32 @@
-<div>
-    <ul>
-      <li ng-repeat="dog in dogs">{{ dog }}</li>
-    </ul>
-</div>
 <div id="form">
   <form>
-  <h3>personal info:</h3><br>
-    Name: <input type="text" ng-model="ticket.name" /><br>
-    Area:
-    <select ng-model = "ticket.area">
-      <option value = "marketing"> Marketing
-      <option value = "human resources">Human Resources
-      <option value = "it"> IT
-    </select><br><br>
+  <!-- <h3>personal info:</h3><br> -->
+    <div class="form-group">
+      <label for="nameId">Name</label>
+      <input type="text" class="form-control" id="nameId" ng-model="ticket.name" />
+    </div>
+    <div class="form-group">
+      <label for="areaId">Area</label>
+      <select class="form-control" id="areaId" ng-model = "ticket.area">
+        <option value = "marketing"> Marketing
+        <option value = "human resources">Human Resources
+        <option value = "it"> IT
+      </select>
+    </div>
 
-    <h3>issue info:</h3><br>
-    Priority:
-    <select ng-model = "ticket.priority">
-      <option value = "low"> Low
-      <option value = "medium">Medium
-      <option value = "high"> High
-    </select><br>
-    Description: <textarea ng-model="ticket.description" /></textarea><br>
+  <!-- <h3>issue info:</h3><br> -->
+    <div>
+      <label for="priorityId">Priority</label>
+      <select class="form-control" id="priorityId" ng-model = "ticket.priority">
+        <option value = "low"> Low
+        <option value = "medium">Medium
+        <option value = "high"> High
+      </select>
+    </div>
+    <div>
+      <label for="descriptionId">Description</label>
+      <textarea class="form-control" id="descriptionId" ng-model="ticket.description" /></textarea><br>
+    </div>
     <input type="submit" ng-click="insertTicket(ticket)" value="upload" />
   </form>
 </div>

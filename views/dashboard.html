@@ -1,7 +1,26 @@
 <h1>
     dashboard
 </h1>
-<h1>
-    My Dashboard
-      <li ng-repeat="dag in dags">{{ dag }}</li>
-</h1>
+
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Type</th>
+        <th>Priority</th>
+        <th>Estatus</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="ticket in ticketsTable ">
+        <td>{{ ticket.name }}</td>
+        <td>{{ ticket.area }}</td>
+        <td>{{ ticket.type }}</td>
+        <td>{{ ticket.priority }}</td>
+        <td>{{ ticket.status }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
