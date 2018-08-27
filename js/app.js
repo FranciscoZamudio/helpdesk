@@ -20,7 +20,8 @@ moduleApp.config(function ($stateProvider,$urlRouterProvider) {
     var metricsState = {
         name: 'metrics',
         url: '/metrics',
-        template: "<h1>About Me</h1><p>I'm a web developer and entrepreneur with 1.5+ years of experience</p>"
+        templateUrl: 'views/metrics.html',
+        controller: 'metricsController'
     }
 
 

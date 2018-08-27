@@ -1,4 +1,4 @@
-//we inyect the controller with a model
+//we inject the controller with a model
 moduleApp.controller("ticketsController", function($scope, ticketsService, $http){
 
 
